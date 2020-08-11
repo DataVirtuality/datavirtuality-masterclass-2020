@@ -1,2 +1,6 @@
-# masterclass-rest
-Samples on how to consume Data Virtuality for data and how to mange an instance. Also provides ideas to workaround mising endpoints.
+# Masterclass 2020
+This repository contains samples and additional information from the various masterclass topics in 2020.
+Please navigate to the repsective folder as each masterclass topic has a dedicated directory assigned.
+You will find complete code samples, snippets for everyday work, some links and more.
+
+**Stay classy :sunglasses:**
