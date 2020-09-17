@@ -1,0 +1,806 @@
+{
+	"info": {
+		"_postman_id": "8b9ba626-6152-4e37-a194-e8ed7a5646a3",
+		"name": "Data Virtuality REST API Samples - On-Premise - Unsecure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Status",
+			"item": [
+				{
+					"name": "Get API Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/status/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"status",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Data Sources and Virtual Schemas",
+			"item": [
+				{
+					"name": "List data sources and virtual schemas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List contents of 'dwh'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/dwh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"dwh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List contents of 'views'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/views",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"views"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List contents of 'SYS'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/SYS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"SYS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List contents of 'SYSADMIN'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/SYSADMIN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"SYSADMIN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List contents of 'SYSLOG'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/SYSLOG",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"SYSLOG"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve contents of \"views.v1\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/views/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"views",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute the procedure \"SYSADMIN.getCurrentDWH\"",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/SYSADMIN/getCurrentDWH",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"SYSADMIN",
+								"getCurrentDWH"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute the procedure \"views.solveQE\"",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"a\": 1, \"b\": -1, \"c\": -4}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/views/solveQE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"views",
+								"solveQE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk-execute the procedure \"views.solveQE\"",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\"a\": 1, \"b\": -1, \"c\": -4}\r\n,{\"a\": 1, \"b\": -2, \"c\": -4}]"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/views/solveQE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"views",
+								"solveQE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop the data source 'file_src'",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/file_src",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"file_src"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a local MS SQL Server",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ds_ms_advworks\",\r\n    \"template\":\"mssql\",\r\n    \"translator\":\"sqlserver\",\r\n    \"connectionProps\":\"host=localhost,port=1433,db=AdventureWorks,user-name=sa,password=<Password>\",\r\n    \"modelProps\":\"importer.tableTypes=\\\"TABLE,VIEW\\\",importer.schemaPattern=\\\"Sales,Person\\\",importer.importIndexes=TRUE,importer.useFullSchemaName=FALSE\",\r\n    \"translatorProps\":\"SupportsOrderByString=false\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a local directory as ‘file’ data source",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ds_local_file\",\r\n    \"template\":\"ufile\",\r\n    \"translator\":\"ufile\",\r\n    \"connectionProps\":\"ParentDirectory=C:/FileDataSource\",\r\n    \"modelProps\":\"importer.useFullSchemaName=false\",\r\n    \"translatorProps\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "SQL Queries",
+			"item": [
+				{
+					"name": "Query with POST as 2D array and with headers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sql\": \"select * from \\\"SYS.Schemas\\\";\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/query?headers=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"query"
+							],
+							"query": [
+								{
+									"key": "headers",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query with POST  as list of JSONs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sql\": \"select * from \\\"SYS.Schemas\\\";\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/query?array=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"query"
+							],
+							"query": [
+								{
+									"key": "array",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query with POST with pagination",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"sql\": \"select * from \\\"SYS.Schemas\\\";\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/query?array=false&pagination=true&limit=10&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"query"
+							],
+							"query": [
+								{
+									"key": "array",
+									"value": "false"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2nd Query with POST and pagination",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/query?limit=10&requestId=87631&offset=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"query"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "requestId",
+									"value": "87631"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2nd Query with GET and pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/rest/api/query?requestId=87631&limit=10&offset=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"query"
+							],
+							"query": [
+								{
+									"key": "requestId",
+									"value": "87631"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Custom",
+			"item": [
+				{
+					"name": "Drop virtual schema by name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"shemaName\": \"schema1\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/helpers/dropSchmaByName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"helpers",
+								"dropSchmaByName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start job by id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"jobId\": 6}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/helpers/startJobById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"helpers",
+								"startJobById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start job by description",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"jobDescription\": \"Clean old histories task\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/helpers/startJobByDescription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"helpers",
+								"startJobByDescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh failed data sources",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/helpers/refreshFailedDataSources",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"helpers",
+								"refreshFailedDataSources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh failed data sources alternative",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/api/source/helpers/refreshFailedDataSourcesAlternative",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"api",
+								"source",
+								"helpers",
+								"refreshFailedDataSourcesAlternative"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "mySecurePassword",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0eaa2375-ef97-4f10-ab08-61d69573b89f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8062a1e7-75fb-4d4f-b86c-4cfafcb4ba23",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,175 @@
+### GET DV Status
+GET http://localhost:8080/rest/api/status HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List data sources and virtual schemas
+GET http://localhost:8080/rest/api/source HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List contents of 'dwh'
+GET http://localhost:8080/rest/api/source/dwh HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List contents of 'views'
+GET http://localhost:8080/rest/api/source/views HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List contents of 'SYS'
+GET http://localhost:8080/rest/api/source/SYS HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List contents of 'SYSADMIN'
+GET http://localhost:8080/rest/api/source/SYSADMIN HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### List contents of 'SYSLOG'
+GET http://localhost:8080/rest/api/source/SYSLOG HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### Retrieve contents of "views.v1"
+GET http://localhost:8080/rest/api/source/views/v1 HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### Execute the procedure "SYSADMIN.getCurrentDWH"
+POST http://localhost:8080/rest/api/source/SYSADMIN/getCurrentDWH HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{}
+
+
+### Execute the procedure "views.solveQE"
+POST http://localhost:8080/rest/api/source/views/solveQE HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{"a": 1, "b": -1, "c": -4}
+
+
+### Bulk-execute the procedure "views.solveQE"
+POST http://localhost:8080/rest/api/source/views/solveQE HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+[{"a": 1, "b": -1, "c": -4}
+,{"a": 1, "b": -2, "c": -4}]
+
+
+### Drop the data source 'file_src'
+DELETE http://localhost:8080/rest/api/source/file_src HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### Add a local MS SQL Server
+POST http://localhost:8080/rest/api/source/
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{
+    "name":"ds_ms_advworks",
+    "template":"mssql",
+    "translator":"sqlserver",
+    "connectionProps":"host=localhost,port=1433,db=AdventureWorks,user-name=sa,password=Passwort123",
+    "modelProps":"importer.tableTypes=\"TABLE,VIEW\",importer.schemaPattern=\"Sales,Person\",importer.importIndexes=TRUE,importer.useFullSchemaName=FALSE",
+    "translatorProps":"SupportsOrderByString=false"
+}
+
+
+### Add a local directory as ‘file’ data source
+POST http://localhost:8080/rest/api/source/
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{
+    "name":"ds_local_file",
+    "template":"ufile",
+    "translator":"ufile",
+    "connectionProps":"ParentDirectory=C:/FileDataSource",
+    "modelProps":"importer.useFullSchemaName=false",
+    "translatorProps":""
+}
+
+
+### Query with POST as 2D array and with headers
+POST http://localhost:8080/rest/api/query?headers=true HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{ "sql": "select * from \"SYS.Schemas\";" }
+
+
+### Query with POST as list of JSONs
+POST http://localhost:8080/rest/api/query?array=false HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{ "sql": "select * from \"SYS.Schemas\";" }
+
+
+### Query with POST with pagination
+POST http://localhost:8080/rest/api/query?array=false&pagination=true&limit=10&offset=0 HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{ "sql": "select * from \"SYS.Schemas\";" }
+
+
+### 2nd Query with POST and pagination
+POST http://localhost:8080/rest/api/query?requestId=87631&limit=10&offset=10 HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{}
+
+
+### 2nd Query with GET and pagination
+GET http://localhost:8080/rest/api/query?requestId=87631&limit=10&offset=10 HTTP/1.1
+Authorization: Basic <BasicToken>
+
+
+### Call a source's procedure - customization drop virtual schema by name
+POST http://localhost:8080/rest/api/source/helpers/dropSchmaByName HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{"shemaName": "schema1"}
+
+
+### Call a source's procedure - customization start job by id
+POST http://localhost:8080/rest/api/source/helpers/startJobById HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{"jobId": 6}
+
+
+### Call a source's procedure - customization start job by description
+POST http://localhost:8080/rest/api/source/helpers/startJobByDescription HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{"jobDescription": "Clean old histories task"}
+
+
+### Call a source's procedure - customization refresh failed data sources in sequence
+POST http://localhost:8080/rest/api/source/helpers/refreshFailedDataSources HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{}
+
+
+### Call a source's procedure - customization refresh failed data sources in parallel
+POST http://localhost:8080/rest/api/source/helpers/refreshFailedDataSourcesAlternative HTTP/1.1
+Authorization: Basic <BasicToken>
+Content-Type: application/json
+
+{}
