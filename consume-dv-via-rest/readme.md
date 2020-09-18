@@ -1,5 +1,7 @@
 # Consuming Data Virtuality via the built-in REST API
 
+[Watch the presentation on Vimeo](https://vimeo.com/458569422/be4ab9d256)
+
 List of files
 - sql script for creation of sample views and procedures used during the session
 - pdf version of the slides used during the session
