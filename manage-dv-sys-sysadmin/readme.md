@@ -1,5 +1,7 @@
 # Manage Data Virtuality using the schemas SYSADMIN, SYSLOG and SYS
 
+[Watch the presentation on Vimeo](https://vimeo.com/458512905/85d30c9c54)
+
 List of files
 - sql script for creation of sample views and procedures used during the session
 - pdf version of the slides used during the session
